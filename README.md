@@ -14,11 +14,13 @@
 <img src="https://user-images.githubusercontent.com/88976237/178189175-aa3ee1fa-a38a-409e-90a6-7d6a70c90c59.png">
 <hr>
 
-다중파일 업로드
+다중파일 선택
 <img src="https://user-images.githubusercontent.com/88976237/178189206-c5da0176-9123-40d6-b7e0-a2bc6062c63d.png">
 <hr>
 
+다중파일 업로드
 <img src="https://user-images.githubusercontent.com/88976237/178189215-dec4af1d-ab4a-4679-bda0-631db5070e6f.png">
 <hr>
 
+다중파일 다운로드(서로 다른 파일들임)
 <img src="https://user-images.githubusercontent.com/88976237/178189221-e3faa96d-47ca-472d-9771-b2491358205f.png">
