@@ -8,3 +8,17 @@
 - 다중 파일 업로드 & 다운로드가 가능하게 만들었다.
   db 저장과 별개로 dto객체를 다시 한번 선언해서 리스트에 넣어서 화면에 뿌려주는 방식을 사용했다.
 </pre>
+
+<h2>사진 설명</h2>
+홈화면
+<img src="https://user-images.githubusercontent.com/88976237/178189175-aa3ee1fa-a38a-409e-90a6-7d6a70c90c59.png">
+<hr>
+
+다중파일 업로드
+<img src="https://user-images.githubusercontent.com/88976237/178189206-c5da0176-9123-40d6-b7e0-a2bc6062c63d.png">
+<hr>
+
+<img src="https://user-images.githubusercontent.com/88976237/178189215-dec4af1d-ab4a-4679-bda0-631db5070e6f.png">
+<hr>
+
+<img src="https://user-images.githubusercontent.com/88976237/178189221-e3faa96d-47ca-472d-9771-b2491358205f.png">
