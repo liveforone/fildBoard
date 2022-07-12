@@ -7,8 +7,9 @@
 <body>
 <h1>upload file 목록</h1>
 <ul th:each="file: ${files}">
-    <li ><span th:text="${file.fileName}"></span>
-        <img th:src="@{'/image/' + ${file.uuid} + '_' + ${file.fileName}}"/>
+    <li >
+        <span th:text="${file.fileName}"></span><br>
+        <img th:src="@{'/image/' + ${file.uuid} + '_' + ${file.fileName}}" border="0" width="200" height="200"/><br>
         <a href="#" th:href="${'/download?uuid='+file.uuid+'&fileName='+file.fileName}">[download]</a>
     </li>
 </ul>

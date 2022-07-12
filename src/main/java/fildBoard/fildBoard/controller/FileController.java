@@ -56,12 +56,12 @@ public class FileController {
                 fileDto.setUuid(UUID.randomUUID());  //for문으로 dto에 저장해주고
                 fileDto.setFileName(file.getOriginalFilename());
                 fileDto.setContentType(file.getContentType());
-                fileRepository.save(fileDto.toEntity());  //db에 저장해준다.
                 FileDto dto = new FileDto(UUID.randomUUID(),  //dto에 넣은 비슷한 방식으로 객체를 생성하고 파일을 넣어준다.
                         file.getOriginalFilename(),
                         file.getContentType());
                 list.add(dto);  //dto 파일 객체를 리스트에 넣는다.
                 File newFileName = new File(dto.getUuid() + "_" + dto.getFileName());
+                fileRepository.save(fileDto.toEntity());  //db에 저장해준다.
                 file.transferTo(newFileName);  //transferTo는 로컬 스토리지에 저장하는 것이다.
             }
         }
@@ -89,8 +89,8 @@ public class FileController {
     }
 
     @ResponseBody
-    @GetMapping("/image/{fileName}")
-    public Resource showImage(@PathVariable String fileName) throws MalformedInputException, MalformedURLException {
+    @GetMapping("/image/{fileName}")  //fileName = file.uuid + _ + file.fileName
+    public Resource showImage(@PathVariable String fileName) throws MalformedURLException {
         return new UrlResource("file:C:\\Temp\\upload\\" + fileName);
     }
 }

@@ -30,7 +30,10 @@ public class File {
     private UUID uuid;
 
     @Column
-    private String fileName;
+    private String fileName;  //오리지널 파일이름
+    /*
+    실제로 파일을 가져올때는 uuid + _ + fileName으로 가져와야한다.
+     */
 
     @Column
     private String contentType;
