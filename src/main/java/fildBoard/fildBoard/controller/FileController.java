@@ -5,6 +5,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.core.io.Resource;
+import org.springframework.core.io.UrlResource;
 import org.springframework.http.ContentDisposition;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -18,6 +19,8 @@ import fildBoard.fildBoard.dto.FileDto;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.nio.charset.MalformedInputException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -83,5 +86,11 @@ public class FileController {
 
         Resource resource = new InputStreamResource(Files.newInputStream(path));
         return new ResponseEntity<>(resource, headers, HttpStatus.OK);
+    }
+
+    @ResponseBody
+    @GetMapping("/image/{fileName}")
+    public Resource showImage(@PathVariable String fileName) throws MalformedInputException, MalformedURLException {
+        return new UrlResource("file:C:\\Temp\\upload\\" + fileName);
     }
 }
